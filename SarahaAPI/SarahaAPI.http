@@ -1,0 +1,6 @@
+@SarahaAPI_HostAddress = http://localhost:5239
+
+GET {{SarahaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
