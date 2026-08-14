@@ -45,6 +45,9 @@ The project strictly follows the **Service/Repository Pattern**:
 | `PUT` | `/api/Message/{id}` |  Yes | Update a specific message |
 | `DELETE` | `/api/Message/{id}` |  Yes | Delete a specific message |
 
+## API Documentation
+<img width="1920" height="1856" alt="SarahaAPI Demo" src="https://github.com/user-attachments/assets/0da77860-85eb-4747-a793-a267fcfe3d16" />
+
 ##  How to Run Locally
 
 1. **Clone the repository:**
