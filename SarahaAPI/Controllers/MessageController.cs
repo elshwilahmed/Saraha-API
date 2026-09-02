@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Data;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,6 @@ namespace SarahaAPI.Controllers
         [Authorize]
         public ActionResult GetUserMessagesById(int id)
         {
-
             var ID = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
             if (ID != id)

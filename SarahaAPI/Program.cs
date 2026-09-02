@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SarahaAPI.Data;
+using SarahaAPI.Middlewares;
 using SarahaAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -70,6 +71,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IJWTService, JWTService>();
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<RequestTimingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
